@@ -24,6 +24,7 @@ func (i InventoryEntityToResponse) SliceInventoryEntityToResponse(entityInventor
 		inventoryResponse.UpdateDate = entity.UpdateDate
 		inventoryResponse.Quantity = entity.Quantity
 		inventoryResponse.Product = response.Product(entity.Product)
+		inventoryResponse.SaleAmount = entity.SaleAmount
 		inventoriesResponse = append(inventoriesResponse, inventoryResponse)
 	}
 	return inventoriesResponse

@@ -25,6 +25,7 @@ func (i InventoryCollectionEntity) InventoryCollectionsToEntities(inventoryColle
 		entityInventory.UpdateDate = inventoryCollection.UpdateDate
 		entityInventory.Quantity = inventoryCollection.Quantity
 		entityInventory.Product = parser.ProductCollectionToEntity(inventoryCollection.Product)
+		entityInventory.SaleAmount = inventoryCollection.SaleAmount
 		entitiesInventory = append(entitiesInventory, &entityInventory)
 	}
 

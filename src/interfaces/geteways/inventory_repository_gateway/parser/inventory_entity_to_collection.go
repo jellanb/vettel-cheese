@@ -22,6 +22,6 @@ func (i InventoryEntityToCollection) InventoryEntityToCollection(entityInventory
 	inventoryColl.Product = parser.ProductEntityToCollection(entityInventory.Product)
 	inventoryColl.Date = entityInventory.Date
 	inventoryColl.UpdateDate = entityInventory.UpdateDate
-
+	inventoryColl.SaleAmount = entityInventory.SaleAmount
 	return &inventoryColl
 }

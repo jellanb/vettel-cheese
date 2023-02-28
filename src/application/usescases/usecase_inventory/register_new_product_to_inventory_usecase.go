@@ -3,9 +3,10 @@ package usecase_inventory
 import (
 	"context"
 	"fmt"
-	"github.com/pkg/errors"
 	"vettel-backend-app/src/domain/entity"
 	"vettel-backend-app/src/interfaces/geteways/inventory_repository_gateway"
+
+	"github.com/pkg/errors"
 )
 
 type RegisterNewProductToInventoryUseCaseInterfaces interface {
@@ -27,7 +28,7 @@ func (r RegisterNewProductToInventoryUseCase) RegisterNewProductToInventory(ctx 
 		return err, nil
 	}
 	if inventoryResult != nil {
-		fmt.Printf("Error inventory item not exist with barcode: %s \n", newItem.Product.Barcode)
+		fmt.Printf("Error inventory item already exist with barcode: %s \n", newItem.Product.Barcode)
 		return errors.New("INVENTORY_ALREADY_EXIST."), nil
 	}
 	fmt.Printf("Validation ok item exist to update with barcode: %s \n", newItem.Product.Barcode)

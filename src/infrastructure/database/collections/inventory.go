@@ -7,4 +7,5 @@ type Inventory struct {
 	UpdateDate primitive.DateTime `bson:"updateDate"`
 	Product    Product            `bson:"product"`
 	Quantity   int                `bson:"quantity"`
+	SaleAmount int                `bson:"saleAmount"`
 }
